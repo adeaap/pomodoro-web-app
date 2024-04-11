@@ -9,7 +9,7 @@ const shortBreakHasHappened = ref(0)
 const maxNumberOfShortBreaks = ref(1)
 const timer = ref(0) // In seconds
 const pauseTimer = ref(false)
-const intervalId = ref<null | number>(null)
+const intervalId = ref<null | ReturnType<typeof setTimeout>>(null)
 const settingsDialogVisible = ref(false)
 const cicleState = ref<
   'default-state' | 'pomodoro' | 'short-break' | 'long-break' | 'pomodoro-cicle-complete'
